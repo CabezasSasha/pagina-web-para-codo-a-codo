@@ -1,0 +1,72 @@
+.inicio {
+    margin-left: 8rem;
+    padding-left: 2rem;
+}
+.text-codo {
+    color: #97c93e !important;
+  }
+  
+   .btn-codo {
+    background-color: #97c93e;
+    color: white;
+   
+  } 
+  
+  .btn-codo:hover {
+    background-color: #82ad36;
+  } 
+  
+  #fondo {
+    background: linear-gradient(90deg,#1c3643,#273b47 25%,#1e5372);
+  }
+  
+  #fondo li {
+    color: white;
+  }
+
+  div.tabla-precio {
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+    
+  }
+  
+  div.tabla-precio ul li {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #868686;
+      line-height: 26px;
+  }
+  div.tabla-precio ul li:before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    font-size: 20px;
+    color: green;
+    
+  }
+  div.tabla-precio h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size:16px;
+    text-transform: uppercase;
+  }
+  div.tabla-precio p.numero {
+    color: #000000;
+    margin: 20px;
+  }
+  
+  div.extras div.orden {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  div.extras div.orden input {
+  margin: 30px;    
+  }
+  
+  .card {
+    display: inline-block;
+  }

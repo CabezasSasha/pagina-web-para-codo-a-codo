@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>integradorde de js</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.0.2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="integrador.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="57">
+  <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"> Conf Bs As</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse inicio" id="navbar">
+        <ul class="navbar-nav col-ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#main">La conferencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#speakers">Las oradores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#place-time">El lugar y la fecha</a></li>
+          <li class="nav-item"><a class="nav-link" style="color: ghostwhite;" href="#conviertete-en-orador">Conviértete
+              en orador</a></li>
+          <li class="nav-item"><a class="nav-link text-codo" href="#" data-toggle="modal"
+              data-target="#modalCompra">Comprar tickets</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main"></main>
+  <section id="conviertete-en-orador" class="pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+          <div class="card-group">
+            <div class="card">
+              <div class="card-body border border-primary mr-1">
+                <h5 class="card-title text-center">Estudiante</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-title text-center font-weight-bold">80%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body border border-info mr-1">
+                <h5 class="card-title text-center">Trainee</h5>
+                <p class="card-text ">Tienen un descuento</p>
+                <p class="card-title text-center font-weight-bold">50%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body border border-warning">
+                <h5 class="card-title text-center">Junior</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-title text-center font-weight-bold">15%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col text-uppercase text-center">
+          <small>Venta</small>
+          <h2>Valor de ticket $200</h2>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+      <form action="">
+        <div class="row justify-content-md-center">
+          <div class="col-md-6">
+            <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+          </div>
+        </div>
+        <br>
+       <div class="col-12 col-md-12">
+         <input type="email" class="form-control" placeholder="Correo">
+        </div>
+        <br>
+        <div class="row justify-content-md">
+          <div class="col-md-6">
+            <label for="">Cantidad</label>
+           <input id="cantidadEntrada" type="text" class="form-control" placeholder="cantidad">
+          </div>
+          <br>
+          <div class="col-md-5">
+            <label for="">Categoria</label>
+            <select id="inputState" class="form-control" id="categoria">
+              <option selected value="estudiante">Estudiante</option>
+              <option value="trainee">Trainee</option>
+              <option value="junior">Junior</option>
+           </select>
+          </div>
+        </div>
+        <br>
+        <div class="col-12 col-md-6"></div>
+         <div class="row">
+          <div class="col">
+            <div id="totalCompra" class="alert alert-primary" role="alert"> Total a pagar: $ </div>
+          </div>
+          <br>
+          <div class="row">
+              <button type="reset" class="col m-1 btn btn-codo btn-lg btn-dark">Borrar</button>
+              <button type="button" id="botonCalcular" class=" col m-1 btn btn-codo btn-lg btn-dark">Resumen</button>
+          </div>
+          </form>
+      </div>
+    </div>
+  </section>
+<br><br>
+
+  <nav class="nav navbar-expand navbar-dark" id="fondo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-justified w-100 px-5 align-items-center">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Preguntas frecuentes</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Contáctanos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">prensa</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Conferencias</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Términos y condiciones</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Privacidad</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#"> Estudiantes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Comprar tickets</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="form-group col">
+                <label for="inputEmail4">Nombre</label>
+                <input type="text" class="form-control" id="inputEmail4">
+                <label for="inputEmail4">Apellido</label>
+                <input type="text" class="form-control" id="inputEmail4">
+                <label for="inputEmail4">Cantidad Tikets</label>
+                <input type="number" class="form-control" id="inputEmail4">
+                <div class="form-group">
+                   
+                <select id="pais" class="form-control">
+                  <option selected>Argentina</option>
+                  <option>Brasil</option>
+                  <option>Bolivia</option>
+                  <option>Chile</option>
+                  <option>Paraguay</option>
+                  <option>Uruguay</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">@</span></div>
+                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="alert alert-warning" role="alert">Recibirás un correo de confirmación</div>
+          <div id="totalResumen"><p>Resumen</p></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-platzi">Resumen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<script src="integrador.js"></script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
